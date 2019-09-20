@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		564D3A0C231DAE6600D20948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564D3A0B231DAE6600D20948 /* Assets.xcassets */; };
+		5675985B230716FE002898B3 /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675985A230716FE002898B3 /* HistoryItem.swift */; };
+		56ADF8C72330036000184F0B /* MensaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADF8C62330036000184F0B /* MensaDatabase.swift */; };
+		56BD19832330172800CEA2DD /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D39E6231DA78900D20948 /* GoogleAppMeasurement.framework */; };
+		56BD19862330172A00CEA2DD /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D39EA231DA79600D20948 /* GoogleMobileAds.framework */; };
+		56BD19882330172B00CEA2DD /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D39ED231DA7A700D20948 /* GoogleUtilities.framework */; };
+		56BD198A2330172C00CEA2DD /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D39F0231DA7B000D20948 /* nanopb.framework */; };
+		56D2DFA9230608060014CA4C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2DFA8230608060014CA4C /* AboutViewController.swift */; };
+		56D2DFB423061EDD0014CA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D2DFB223061EDD0014CA4C /* Localizable.strings */; };
+		56D2DFBD2306FD600014CA4C /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2DFBC2306FD600014CA4C /* HistoryTableViewController.swift */; };
+		56D2DFBF230700610014CA4C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2DFBE230700610014CA4C /* HistoryTableViewCell.swift */; };
+		56D901692300256800DD46A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D901682300256800DD46A5 /* AppDelegate.swift */; };
+		56D9016B2300256800DD46A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9016A2300256800DD46A5 /* SceneDelegate.swift */; };
+		56D9016D2300256800DD46A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9016C2300256800DD46A5 /* MainViewController.swift */; };
+		56D901702300256800DD46A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D9016E2300256800DD46A5 /* Main.storyboard */; };
+		56D901752300256900DD46A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D901732300256900DD46A5 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		564D39E6231DA78900D20948 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0/GoogleAppMeasurement.framework"; sourceTree = "<group>"; };
+		564D39EA231DA79600D20948 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		564D39ED231DA7A700D20948 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0/GoogleUtilities.framework"; sourceTree = "<group>"; };
+		564D39F0231DA7B000D20948 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0/nanopb.framework"; sourceTree = "<group>"; };
+		564D39F3231DADA000D20948 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		564D39F5231DADAF00D20948 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		564D39F7231DADB900D20948 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		564D39F9231DAE1600D20948 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		564D39FA231DAE1600D20948 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		564D39FB231DAE1600D20948 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		564D39FC231DAE1700D20948 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		564D39FD231DAE1700D20948 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		564D39FE231DAE1700D20948 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		564D39FF231DAE1700D20948 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		564D3A00231DAE1700D20948 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		564D3A01231DAE1700D20948 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		564D3A0B231DAE6600D20948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5675985A230716FE002898B3 /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		56829772231DA5140079990E /* GoogleMobileAdsSdkiOS-7.49.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "GoogleMobileAdsSdkiOS-7.49.0"; sourceTree = "<group>"; };
+		56ADF8C62330036000184F0B /* MensaDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDatabase.swift; sourceTree = "<group>"; };
+		56D2DFA8230608060014CA4C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		56D2DFAB23061C680014CA4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		56D2DFB323061EDD0014CA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Mensa-Guthaben/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		56D2DFB523061EE20014CA4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mensa-Guthaben/de.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		56D2DFB92306209C0014CA4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		56D2DFBC2306FD600014CA4C /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		56D2DFBE230700610014CA4C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		56D901652300256800DD46A5 /* Mensa-Guthaben.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa-Guthaben.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D901682300256800DD46A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56D9016A2300256800DD46A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		56D9016C2300256800DD46A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		56D9016F2300256800DD46A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56D901742300256900DD46A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56D901762300256900DD46A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D9017C2300319F00DD46A5 /* Mensa-Guthaben.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa-Guthaben.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56D901622300256800DD46A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BD19862330172A00CEA2DD /* GoogleMobileAds.framework in Frameworks */,
+				56BD19882330172B00CEA2DD /* GoogleUtilities.framework in Frameworks */,
+				56BD198A2330172C00CEA2DD /* nanopb.framework in Frameworks */,
+				56BD19832330172800CEA2DD /* GoogleAppMeasurement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		564D39E5231DA78900D20948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				564D39FD231DAE1700D20948 /* CoreGraphics.framework */,
+				564D39FB231DAE1600D20948 /* CoreMedia.framework */,
+				564D39FC231DAE1700D20948 /* CoreTelephony.framework */,
+				564D39F9231DAE1600D20948 /* EventKit.framework */,
+				564D39FA231DAE1600D20948 /* EventKitUI.framework */,
+				564D3A00231DAE1700D20948 /* MediaPlayer.framework */,
+				564D39FE231DAE1700D20948 /* MessageUI.framework */,
+				564D39FF231DAE1700D20948 /* StoreKit.framework */,
+				564D3A01231DAE1700D20948 /* SystemConfiguration.framework */,
+				564D39F7231DADB900D20948 /* AVFoundation.framework */,
+				564D39F5231DADAF00D20948 /* AudioToolbox.framework */,
+				564D39F3231DADA000D20948 /* AdSupport.framework */,
+				564D39F0231DA7B000D20948 /* nanopb.framework */,
+				564D39ED231DA7A700D20948 /* GoogleUtilities.framework */,
+				564D39EA231DA79600D20948 /* GoogleMobileAds.framework */,
+				564D39E6231DA78900D20948 /* GoogleAppMeasurement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56D9015C2300256800DD46A5 = {
+			isa = PBXGroup;
+			children = (
+				56D2DFB223061EDD0014CA4C /* Localizable.strings */,
+				56D901672300256800DD46A5 /* Mensa-Guthaben */,
+				56D901662300256800DD46A5 /* Products */,
+				564D39E5231DA78900D20948 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		56D901662300256800DD46A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56D901652300256800DD46A5 /* Mensa-Guthaben.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56D901672300256800DD46A5 /* Mensa-Guthaben */ = {
+			isa = PBXGroup;
+			children = (
+				56829772231DA5140079990E /* GoogleMobileAdsSdkiOS-7.49.0 */,
+				564D3A0B231DAE6600D20948 /* Assets.xcassets */,
+				56D9017C2300319F00DD46A5 /* Mensa-Guthaben.entitlements */,
+				56D901682300256800DD46A5 /* AppDelegate.swift */,
+				56D9016A2300256800DD46A5 /* SceneDelegate.swift */,
+				56D2DFA8230608060014CA4C /* AboutViewController.swift */,
+				56D9016C2300256800DD46A5 /* MainViewController.swift */,
+				56D2DFBC2306FD600014CA4C /* HistoryTableViewController.swift */,
+				56D2DFBE230700610014CA4C /* HistoryTableViewCell.swift */,
+				5675985A230716FE002898B3 /* HistoryItem.swift */,
+				56ADF8C62330036000184F0B /* MensaDatabase.swift */,
+				56D9016E2300256800DD46A5 /* Main.storyboard */,
+				56D901732300256900DD46A5 /* LaunchScreen.storyboard */,
+				56D901762300256900DD46A5 /* Info.plist */,
+			);
+			path = "Mensa-Guthaben";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56D901642300256800DD46A5 /* Mensa-Guthaben */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56D901792300256900DD46A5 /* Build configuration list for PBXNativeTarget "Mensa-Guthaben" */;
+			buildPhases = (
+				56D901612300256800DD46A5 /* Sources */,
+				56D901622300256800DD46A5 /* Frameworks */,
+				56D901632300256800DD46A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mensa-Guthaben";
+			productName = "Mensa-Guthaben";
+			productReference = 56D901652300256800DD46A5 /* Mensa-Guthaben.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56D9015D2300256800DD46A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Georg Sieber";
+				TargetAttributes = {
+					56D901642300256800DD46A5 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 56D901602300256800DD46A5 /* Build configuration list for PBXProject "Mensa-Guthaben" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 56D9015C2300256800DD46A5;
+			productRefGroup = 56D901662300256800DD46A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56D901642300256800DD46A5 /* Mensa-Guthaben */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56D901632300256800DD46A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D901752300256900DD46A5 /* LaunchScreen.storyboard in Resources */,
+				56D2DFB423061EDD0014CA4C /* Localizable.strings in Resources */,
+				56D901702300256800DD46A5 /* Main.storyboard in Resources */,
+				564D3A0C231DAE6600D20948 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56D901612300256800DD46A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56D2DFBF230700610014CA4C /* HistoryTableViewCell.swift in Sources */,
+				56D9016D2300256800DD46A5 /* MainViewController.swift in Sources */,
+				5675985B230716FE002898B3 /* HistoryItem.swift in Sources */,
+				56D901692300256800DD46A5 /* AppDelegate.swift in Sources */,
+				56D2DFA9230608060014CA4C /* AboutViewController.swift in Sources */,
+				56D2DFBD2306FD600014CA4C /* HistoryTableViewController.swift in Sources */,
+				56D9016B2300256800DD46A5 /* SceneDelegate.swift in Sources */,
+				56ADF8C72330036000184F0B /* MensaDatabase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		56D2DFB223061EDD0014CA4C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56D2DFB323061EDD0014CA4C /* Base */,
+				56D2DFB523061EE20014CA4C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		56D9016E2300256800DD46A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56D9016F2300256800DD46A5 /* Base */,
+				56D2DFB92306209C0014CA4C /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56D901732300256900DD46A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56D901742300256900DD46A5 /* Base */,
+				56D2DFAB23061C680014CA4C /* de */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56D901772300256900DD46A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56D901782300256900DD46A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56D9017A2300256900DD46A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mensa-Guthaben/Mensa-Guthaben.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 96G8V7UY3M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0",
+				);
+				INFOPLIST_FILE = "Mensa-Guthaben/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "systems.sieber.Mensa-Guthaben";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		56D9017B2300256900DD46A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mensa-Guthaben/Mensa-Guthaben.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 96G8V7UY3M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.49.0",
+				);
+				INFOPLIST_FILE = "Mensa-Guthaben/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "systems.sieber.Mensa-Guthaben";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56D901602300256800DD46A5 /* Build configuration list for PBXProject "Mensa-Guthaben" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D901772300256900DD46A5 /* Debug */,
+				56D901782300256900DD46A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56D901792300256900DD46A5 /* Build configuration list for PBXNativeTarget "Mensa-Guthaben" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D9017A2300256900DD46A5 /* Debug */,
+				56D9017B2300256900DD46A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56D9015D2300256800DD46A5 /* Project object */;
+}

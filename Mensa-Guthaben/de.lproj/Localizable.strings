@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Mensa-Guthaben
+
+  Created by Georg on 16.08.19.
+  Copyright © 2019 Georg Sieber. All rights reserved.
+*/
+"Please hold your Mensa card near the NFC sensor." = "Bitte die Mensakarte an den NFC-Sensor halten.";
+"NFC Not Supported" = "Keine NFC-Unterstützung";
+"This device doesn't support NFC tag scanning." = "NFC wird auf diesem Gerät nicht unterstützt.";
+"With this app you can scan your mensa card to get it's balance instantly! Get it now: Search for 'Mensa Balance' on the App Store!" = "Mit dieser App kannst du das aktuelle Guthaben deiner Mensakarte auslesen! Lade sie dir gleich herunter: suche nach 'Mensa-Guthaben' im App Store.";

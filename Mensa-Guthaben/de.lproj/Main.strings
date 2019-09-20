@@ -1,0 +1,46 @@
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "2cv-ZF-ArR"; */
+"2cv-ZF-ArR.title" = "Mensa-Guthaben";
+
+/* Class = "UIButton"; normalTitle = "Scan Card"; ObjectID = "5cC-F2-pcv"; */
+"5cC-F2-pcv.normalTitle" = "Karte einlesen";
+
+/* Class = "UILabel"; text = "© Georg Sieber 2019"; ObjectID = "6F9-6L-2e8"; */
+"6F9-6L-2e8.text" = "© Georg Sieber 2019";
+
+/* Class = "UILabel"; text = "Current Balance"; ObjectID = "80b-a2-83j"; */
+"80b-a2-83j.text" = "Aktuelles Guthaben";
+
+/* Class = "UILabel"; text = "Card ID"; ObjectID = "82r-zG-bKL"; */
+"82r-zG-bKL.text" = "Karten-ID";
+
+/* Class = "UILabel"; text = "Last Transaction"; ObjectID = "LMu-7B-iqZ"; */
+"LMu-7B-iqZ.text" = "Letzte Transaktion";
+
+/* Class = "UIBarButtonItem"; title = "Scan"; ObjectID = "YIv-e8-S3i"; */
+"YIv-e8-S3i.title" = "Einlesen";
+
+/* Class = "UINavigationItem"; title = "Mensa Balance"; ObjectID = "jLg-ZD-Trf"; */
+"jLg-ZD-Trf.title" = "Mensa-Guthaben";
+
+/* Class = "UILabel"; text = "Mensa Balance"; ObjectID = "lnf-VA-ksf"; */
+"lnf-VA-ksf.text" = "Mensa-Guthaben";
+
+/* Class = "UILabel"; text = "No Card Scanned"; ObjectID = "vkO-9p-5aI"; */
+"vkO-9p-5aI.text" = "Noch keine Karte eingelesen";
+
+/* Class = "UINavigationItem"; title = "Recent Scans"; ObjectID = "wyp-Ws-H0U"; */
+"wyp-Ws-H0U.title" = "Letzte Scans";
+
+"zy3-FN-uBZ.text" = "Einlesedatum";
+
+"vem-uO-h4U.text" = "Noch keine Karte eingelesen";
+
+"YCW-Gc-Kjj.text" = "KONTAKT";
+"IKe-kI-Edd.text" = "Deine Karte funktioniert mit der App, ist aber noch nicht im App Store aufgelistet? Bitte sende mir eine E-Mail!";
+
+"YYm-FY-bSD.text" = "INFORMATIONEN";
+"V2s-1s-uhS.normalTitle" = "Mensa-Guthaben teilen";
+"65Y-Qf-SLG.normalTitle" = "Mensa-Guthaben auf Github";
+
+"V0R-F5-ST3.text" = "WEITERE APPS";
