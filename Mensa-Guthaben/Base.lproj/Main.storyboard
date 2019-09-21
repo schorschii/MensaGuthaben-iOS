@@ -137,7 +137,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.59607843137254901" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="9ZG-kz-sFF" firstAttribute="top" secondItem="0jg-3y-UCw" secondAttribute="top" constant="15" id="FPz-ra-9Zr"/>
                                     <constraint firstAttribute="bottom" secondItem="9ZG-kz-sFF" secondAttribute="bottom" constant="15" id="WtG-ZT-71p"/>
@@ -183,6 +183,7 @@
                         <outlet property="labelCurrentBalance" destination="UPO-oi-gFY" id="2sJ-D2-QdG"/>
                         <outlet property="labelDate" destination="vem-uO-h4U" id="Jeb-k2-wfe"/>
                         <outlet property="labelLastTransaction" destination="4Zb-sQ-jBV" id="Bu8-Un-HCI"/>
+                        <outlet property="viewCardBackground" destination="0jg-3y-UCw" id="XNk-6s-7u3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

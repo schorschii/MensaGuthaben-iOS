@@ -15,6 +15,7 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     static var APP_ID  : Int    = 0x5F8415
     static var FILE_ID : UInt8  = 1
+    static var DEMO    : Bool   = false
     
     var session: NFCTagReaderSession?
     var db = MensaDatabase()
@@ -24,7 +25,11 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initAds()
+        if(MainViewController.DEMO) {
+            demo()
+        } else {
+            initAds()
+        }
     }
     
     func initAds() {
@@ -51,6 +56,7 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     @IBOutlet weak var labelLastTransaction: UILabel!
     @IBOutlet weak var labelCardID: UILabel!
     @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var viewCardBackground: UIView!
     
     @IBAction func onClick(_ sender: UIButton) {
         guard NFCTagReaderSession.readingAvailable else {
@@ -135,6 +141,9 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
                                 DispatchQueue.main.async {
                                     self.labelCurrentBalance.text = String(format: "%.2f €", currentBalanceValue)
                                     self.labelDate.text = self.getDateString()
+                                    UIView.animate(withDuration: 1.0, animations: {
+                                        self.viewCardBackground.backgroundColor = self.getColorByEuro(euro:currentBalanceValue)
+                                    })
                                 }
                                 
                                 // 3rd command : read last trans
@@ -196,6 +205,41 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     }
     func intToEuro(value:Int) -> Double {
         return (Double(value)/1000).rounded(toPlaces: 2)
+    }
+    func getColorByEuro(euro:Double) -> UIColor {
+        let maxEuro = 10.0
+        var position = CGFloat(euro/maxEuro)
+        if(position > 1) {position = 1}
+        if(position < 0) {position = 0}
+        
+        let colorGreenR = CGFloat(38)/255
+        let colorGreenG = CGFloat(152)/255
+        let colorGreenB = CGFloat(88)/255
+        
+        let colorRedR = CGFloat(180)/255
+        let colorRedG = CGFloat(15)/255
+        let colorRedB = CGFloat(15)/255
+        
+        let colorR = colorRedR + position * (colorGreenR - colorRedR)
+        let colorG = colorRedG + position * (colorGreenG - colorRedG)
+        let colorB = colorRedB + position * (colorGreenB - colorRedB)
+        
+        return UIColor(
+            red: colorR,
+            green: colorG,
+            blue: colorB,
+            alpha: CGFloat(1)
+        )
+    }
+    
+    func demo() {
+        self.labelCurrentBalance.text = String(format: "%.2f €", 15.48)
+        self.labelLastTransaction.text = String(format: "%.2f €", 5.98)
+        self.labelDate.text = self.getDateString()
+        self.labelCardID.text = "1234567890"
+        UIView.animate(withDuration: 1.0, animations: {
+            self.viewCardBackground.backgroundColor = self.getColorByEuro(euro:15.48)
+        })
     }
     
     func getDateString() -> String {

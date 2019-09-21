@@ -45,6 +45,16 @@ class MensaDatabase {
         }
     }
     
+    func deleteRecord(id:Int) {
+        var stmt:OpaquePointer?
+        if sqlite3_prepare(self.db, "DELETE FROM history WHERE id = ?", -1, &stmt, nil) == SQLITE_OK {
+            sqlite3_bind_int(stmt, 1, Int32(id))
+            if sqlite3_step(stmt) == SQLITE_DONE {
+                sqlite3_finalize(stmt)
+            }
+        }
+    }
+    
     func getEntries() -> [HistoryItem] {
         var historyStore: [HistoryItem] = []
         var stmt:OpaquePointer?
