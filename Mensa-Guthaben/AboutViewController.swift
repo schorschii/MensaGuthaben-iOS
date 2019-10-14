@@ -50,6 +50,9 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
     }
+    @IBAction func onClickAppStore(_ sender: Any) {
+        openStoreProductWithiTunesItemIdentifier(identifier: "1476859721");
+    }
     @IBAction func onClickBallBreak(_ sender: Any) {
         openStoreProductWithiTunesItemIdentifier(identifier: "1409746305");
     }
