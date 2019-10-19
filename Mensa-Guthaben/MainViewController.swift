@@ -95,7 +95,10 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate, GADBann
                     return
                 }
                 
-                let idData = tag.identifier
+                var idData = tag.identifier
+                if(idData.count == 7) {
+                    idData.append(UInt8(0))
+                }
                 let idInt = idData.withUnsafeBytes {
                     $0.load(as: Int.self)
                 }
