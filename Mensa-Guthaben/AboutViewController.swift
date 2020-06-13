@@ -28,7 +28,7 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
         }
     }
     @IBAction func onClickEmail(_ sender: UIButton) {
-        if let url = URL(string: "mailto:ios@georg-sieber.de") {
+        if let url = URL(string: "mailto:support@georg-sieber.de") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
