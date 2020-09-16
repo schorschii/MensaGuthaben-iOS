@@ -5,9 +5,6 @@
 /* Class = "UIButton"; normalTitle = "Scan Card"; ObjectID = "5cC-F2-pcv"; */
 "5cC-F2-pcv.normalTitle" = "Karte einlesen";
 
-/* Class = "UILabel"; text = "© Georg Sieber 2019"; ObjectID = "6F9-6L-2e8"; */
-"6F9-6L-2e8.text" = "© Georg Sieber 2019";
-
 /* Class = "UILabel"; text = "Current Balance"; ObjectID = "80b-a2-83j"; */
 "80b-a2-83j.text" = "Aktuelles Guthaben";
 
@@ -47,3 +44,4 @@
 
 "V0R-F5-ST3.text" = "WEITERE APPS";
 "vWN-39-6aA.text" = "im iOS App Store";
+"hR0-e9-VZ7.normalTitle" = "Kundendatenbank";

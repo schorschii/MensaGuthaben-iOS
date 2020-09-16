@@ -53,6 +53,9 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
     @IBAction func onClickAppStore(_ sender: Any) {
         openStoreProductWithiTunesItemIdentifier(identifier: "1476859721");
     }
+    @IBAction func onClickCustomerDatabase(_ sender: UIButton) {
+        openStoreProductWithiTunesItemIdentifier(identifier: "1496659447");
+    }
     @IBAction func onClickBallBreak(_ sender: Any) {
         openStoreProductWithiTunesItemIdentifier(identifier: "1409746305");
     }
@@ -73,7 +76,7 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
         }
     }
     func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
 }
