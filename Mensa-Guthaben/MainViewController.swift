@@ -9,9 +9,8 @@
 import UIKit
 import CoreNFC
 import SQLite3
-import GoogleMobileAds
 
-class MainViewController: UIViewController, NFCTagReaderSessionDelegate, GADBannerViewDelegate {
+class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     static var APP_ID  : Int    = 0x5F8415
     static var FILE_ID : UInt8  = 1
@@ -21,36 +20,12 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate, GADBann
     var db = MensaDatabase()
     
     @IBOutlet weak var bottomStackView: UIStackView!
-    var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if(MainViewController.DEMO) {
             demo()
-        } else {
-            initAds()
         }
-    }
-    
-    func initAds() {
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        bottomStackView.insertArrangedSubview(bannerView, at: 0)
-        bottomStackView.addConstraints(
-            [
-             NSLayoutConstraint(item: bannerView!,
-                              attribute: .centerX,
-                              relatedBy: .equal,
-                              toItem: bottomStackView,
-                              attribute: .centerX,
-                              multiplier: 1,
-                              constant: 0)
-          ])
-        bannerView.adUnitID = "ca-app-pub-9874695726033794/3374012921"
-        //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // test
-        bannerView.rootViewController = self
-        bannerView.delegate = self
-        bannerView.load(GADRequest())
     }
     
     @IBOutlet weak var labelCurrentBalance: UILabel!
@@ -277,41 +252,6 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate, GADBann
             print("CARD RESPONSE <= "+data.hexEncodedString())
             completion(data)
         })
-    }
-    
-    // AD DELEGATE //
-    
-    /// Tells the delegate an ad request loaded an ad.
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
-    }
-
-    /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-        didFailToReceiveAdWithError error: GADRequestError) {
-      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-    /// Tells the delegate that a full-screen view will be presented in response
-    /// to the user clicking on an ad.
-    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("adViewWillPresentScreen")
-    }
-
-    /// Tells the delegate that the full-screen view will be dismissed.
-    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewWillDismissScreen")
-    }
-
-    /// Tells the delegate that the full-screen view has been dismissed.
-    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewDidDismissScreen")
-    }
-
-    /// Tells the delegate that a user click will open another app (such as
-    /// the App Store), backgrounding the current app.
-    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-      print("adViewWillLeaveApplication")
     }
     
 }

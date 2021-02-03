@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		564D3A0C231DAE6600D20948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564D3A0B231DAE6600D20948 /* Assets.xcassets */; };
 		5675985B230716FE002898B3 /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675985A230716FE002898B3 /* HistoryItem.swift */; };
-		568222F02355052400620261 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5684981A23428F7100F81B2F /* GoogleUtilities.framework */; };
-		568222F22355052600620261 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5684981D23428F7B00F81B2F /* nanopb.framework */; };
 		56ADF8C72330036000184F0B /* MensaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADF8C62330036000184F0B /* MensaDatabase.swift */; };
 		56D2DFA9230608060014CA4C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2DFA8230608060014CA4C /* AboutViewController.swift */; };
 		56D2DFB423061EDD0014CA4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D2DFB223061EDD0014CA4C /* Localizable.strings */; };
@@ -21,8 +19,6 @@
 		56D9016D2300256800DD46A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9016C2300256800DD46A5 /* MainViewController.swift */; };
 		56D901702300256800DD46A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D9016E2300256800DD46A5 /* Main.storyboard */; };
 		56D901752300256900DD46A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D901732300256900DD46A5 /* LaunchScreen.storyboard */; };
-		56DD275F23550596004EE841 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5684981623428F6800F81B2F /* GoogleMobileAds.framework */; };
-		56DD276123550598004EE841 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5684981223428F5700F81B2F /* GoogleAppMeasurement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +36,6 @@
 		564D3A01231DAE1700D20948 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		564D3A0B231DAE6600D20948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5675985A230716FE002898B3 /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
-		5684981223428F5700F81B2F /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.50.0/GoogleAppMeasurement.framework"; sourceTree = "<group>"; };
-		5684981623428F6800F81B2F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.50.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
-		5684981A23428F7100F81B2F /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.50.0/GoogleUtilities.framework"; sourceTree = "<group>"; };
-		5684981D23428F7B00F81B2F /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = "Mensa-Guthaben/GoogleMobileAdsSdkiOS-7.50.0/nanopb.framework"; sourceTree = "<group>"; };
-		568498202342904B00F81B2F /* GoogleMobileAdsSdkiOS-7.50.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "GoogleMobileAdsSdkiOS-7.50.0"; sourceTree = "<group>"; };
 		56ADF8C62330036000184F0B /* MensaDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDatabase.swift; sourceTree = "<group>"; };
 		56D2DFA8230608060014CA4C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		56D2DFAB23061C680014CA4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -68,10 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				568222F22355052600620261 /* nanopb.framework in Frameworks */,
-				56DD275F23550596004EE841 /* GoogleMobileAds.framework in Frameworks */,
-				56DD276123550598004EE841 /* GoogleAppMeasurement.framework in Frameworks */,
-				568222F02355052400620261 /* GoogleUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +68,6 @@
 		564D39E5231DA78900D20948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5684981D23428F7B00F81B2F /* nanopb.framework */,
-				5684981A23428F7100F81B2F /* GoogleUtilities.framework */,
-				5684981623428F6800F81B2F /* GoogleMobileAds.framework */,
-				5684981223428F5700F81B2F /* GoogleAppMeasurement.framework */,
 				564D39FD231DAE1700D20948 /* CoreGraphics.framework */,
 				564D39FB231DAE1600D20948 /* CoreMedia.framework */,
 				564D39FC231DAE1700D20948 /* CoreTelephony.framework */,
@@ -122,7 +105,6 @@
 		56D901672300256800DD46A5 /* Mensa-Guthaben */ = {
 			isa = PBXGroup;
 			children = (
-				568498202342904B00F81B2F /* GoogleMobileAdsSdkiOS-7.50.0 */,
 				564D3A0B231DAE6600D20948 /* Assets.xcassets */,
 				56D9017C2300319F00DD46A5 /* Mensa-Guthaben.entitlements */,
 				56D901682300256800DD46A5 /* AppDelegate.swift */,
