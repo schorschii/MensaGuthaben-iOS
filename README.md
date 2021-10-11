@@ -10,14 +10,36 @@ With this app you can read the current balance of your mensa card.
 - iPhone 7 or newer
 - iOS 13 or newer
 
+## Successfully Tested Cards
+* TU Dresden (Emeal Studentenwerk Dresden)
+* Uni Leipzig
+* HS/Uni Flensburg (Studentenwerk SH)
+* TU Darmstadt
+* Uni Trier
+* Uni Greifswald
+* Leibniz Universität Hannover
+* Ruhr-Uni Bochum
+* h_da (hochschule darmstadt)
+* THOSKA der Bauhaus-Universität Weimar, Hochschule für Musik „Franz List“ Weimar
+* THOSKA der Uni Jena
+* TU Ilmenau
+* Uni Bielefeld
+* Hochschule der Medien, Stuttgart und der Uni Stuttgart
+* Martin-Luther-Universität Halle-Wittenberg
+* Hochschule Furtwangen (HFU)
+* Studierendenwerk Freiburg-Schwarzwald (SWFR)
+* Otto-von-Guericke Universität Magdeburg
+* Deutsche Sporthochschule
+* Uni Würzburg
+* Universität Oldenburg
+* Jadehochschule Oldenburg/Wilhelmshaven/Elsfleth
+* Hochschule Emden/Leer
+* Hochschule Koblenz
+
 ## Contributing
 I'm happy if you want to contribute. Please open an issue if you want to:
 - report a bug / feedback
 - add new card to the list of supported universities
-
-Please open a pull request if you want to:
-- fix a bug
-- add a feature
 
 ## License
 GNU General Public License - see LICENSE.txt  
