@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5643F325282EFA1E002ABA5D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5643F327282EFA1E002ABA5D /* Intents.intentdefinition */; };
 		564D3A0C231DAE6600D20948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564D3A0B231DAE6600D20948 /* Assets.xcassets */; };
 		5675985B230716FE002898B3 /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675985A230716FE002898B3 /* HistoryItem.swift */; };
 		56ADF8C72330036000184F0B /* MensaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADF8C62330036000184F0B /* MensaDatabase.swift */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5643F326282EFA1E002ABA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		5643F329282EFA28002ABA5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Intents.strings; sourceTree = "<group>"; };
 		564D39F3231DADA000D20948 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		564D39F5231DADAF00D20948 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		564D39F7231DADB900D20948 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,7 @@
 				56D2DFBE230700610014CA4C /* HistoryTableViewCell.swift */,
 				5675985A230716FE002898B3 /* HistoryItem.swift */,
 				56ADF8C62330036000184F0B /* MensaDatabase.swift */,
+				5643F327282EFA1E002ABA5D /* Intents.intentdefinition */,
 				56D9016E2300256800DD46A5 /* Main.storyboard */,
 				56D901732300256900DD46A5 /* LaunchScreen.storyboard */,
 				56D901762300256900DD46A5 /* Info.plist */,
@@ -198,6 +202,7 @@
 				56D2DFBF230700610014CA4C /* HistoryTableViewCell.swift in Sources */,
 				56D9016D2300256800DD46A5 /* MainViewController.swift in Sources */,
 				5675985B230716FE002898B3 /* HistoryItem.swift in Sources */,
+				5643F325282EFA1E002ABA5D /* Intents.intentdefinition in Sources */,
 				56D901692300256800DD46A5 /* AppDelegate.swift in Sources */,
 				56D2DFA9230608060014CA4C /* AboutViewController.swift in Sources */,
 				56D2DFBD2306FD600014CA4C /* HistoryTableViewController.swift in Sources */,
@@ -209,6 +214,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5643F327282EFA1E002ABA5D /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5643F326282EFA1E002ABA5D /* Base */,
+				5643F329282EFA28002ABA5D /* de */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
 		56D2DFB223061EDD0014CA4C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

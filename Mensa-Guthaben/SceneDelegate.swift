@@ -20,6 +20,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        // Pass the user activity to a view controller that is able to continue the specific activity.
+        if userActivity.activityType == "ReadMensaCardIntent" {
+            if let nvc = window?.rootViewController as? UINavigationController {
+                if let mvc = nvc.viewControllers.first as? MainViewController {
+                    mvc.restoreUserActivityState(userActivity)
+                }
+            }
+        }
+    }
+
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

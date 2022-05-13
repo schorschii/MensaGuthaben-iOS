@@ -26,6 +26,10 @@
 	<false/>
 	<key>NFCReaderUsageDescription</key>
 	<string>NFC tag to read NDEF messages into the application</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>ReadMensaCardIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

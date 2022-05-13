@@ -27,6 +27,14 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
             demo()
         }
     }
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        // app was started via shortcut, directly start scan process
+        if #available(iOS 12.0, *) {
+            if activity.interaction?.intent is ReadMensaCardIntent {
+                startReaderSession()
+            }
+        }
+    }
     
     @IBOutlet weak var labelCurrentBalance: UILabel!
     @IBOutlet weak var labelLastTransaction: UILabel!
@@ -35,6 +43,10 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     @IBOutlet weak var viewCardBackground: UIView!
     
     @IBAction func onClick(_ sender: UIButton) {
+        startReaderSession()
+    }
+    
+    func startReaderSession() {
         guard NFCTagReaderSession.readingAvailable else {
             let alertController = UIAlertController(
                 title: NSLocalizedString("NFC Not Supported", comment: ""),
@@ -50,7 +62,6 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
         session?.alertMessage = NSLocalizedString("Please hold your Mensa card near the NFC sensor.", comment: "")
         session?.begin()
     }
-    
     func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
     }
     func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
