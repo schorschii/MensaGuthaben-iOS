@@ -23,5 +23,8 @@
 "V2s-1s-uhS.normalTitle" = "Mensa-Guthaben teilen";
 "65Y-Qf-SLG.normalTitle" = "Mensa-Guthaben auf Github";
 
+"7sE-uS-cps.text" = "AUTOMATION";
+"uaX-KO-Mgv.text" = "Du kannst eine Automation einrichten, welche die App automatisch öffnet und die Karte scannt, sobald die Karte an das Gerät gehalten wird.\nÖffne dazu die App \"Kurzbefehle\", lege eine neue Automation an (NFC) und wähle als Aktion \"Mensa-Guthaben\" - \"Mensa-Karte auslesen\" aus.";
+
 "V0R-F5-ST3.text" = "WEITERE APPS";
 "hR0-e9-VZ7.normalTitle" = "Kundendatenbank";
