@@ -62,6 +62,16 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
     @IBAction func onClickItinventory(_ sender: UIButton) {
         openStoreProductWithiTunesItemIdentifier(identifier: "1442661035");
     }
+    @IBAction func onClickOpenComputerOrchestration(_ sender: UIButton) {
+        if let url = URL(string: "https://github.com/schorschii/OCO-Server") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    @IBAction func onClickMasterplan(_ sender: UIButton) {
+        if let url = URL(string: "https://github.com/schorschii/MASTERPLAN") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
     
     func openStoreProductWithiTunesItemIdentifier(identifier: String) {
         let storeViewController = SKStoreProductViewController()

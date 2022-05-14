@@ -1,47 +1,27 @@
-
-/* Class = "UINavigationItem"; title = "About"; ObjectID = "2cv-ZF-ArR"; */
 "2cv-ZF-ArR.title" = "Mensa-Guthaben";
-
-/* Class = "UIButton"; normalTitle = "Scan Card"; ObjectID = "5cC-F2-pcv"; */
-"5cC-F2-pcv.normalTitle" = "Karte einlesen";
-
-/* Class = "UILabel"; text = "Current Balance"; ObjectID = "80b-a2-83j"; */
-"80b-a2-83j.text" = "Aktuelles Guthaben";
-
-/* Class = "UILabel"; text = "Card ID"; ObjectID = "82r-zG-bKL"; */
-"82r-zG-bKL.text" = "Karten-ID";
-
-/* Class = "UILabel"; text = "Last Transaction"; ObjectID = "LMu-7B-iqZ"; */
-"LMu-7B-iqZ.text" = "Letzte Transaktion";
-
-/* Class = "UIBarButtonItem"; title = "Scan"; ObjectID = "YIv-e8-S3i"; */
-"YIv-e8-S3i.title" = "Einlesen";
-
-/* Class = "UINavigationItem"; title = "Mensa Balance"; ObjectID = "jLg-ZD-Trf"; */
 "jLg-ZD-Trf.title" = "Mensa-Guthaben";
-
-/* Class = "UILabel"; text = "Mensa Balance"; ObjectID = "lnf-VA-ksf"; */
 "lnf-VA-ksf.text" = "Mensa-Guthaben";
-
-/* Class = "UILabel"; text = "No Card Scanned"; ObjectID = "vkO-9p-5aI"; */
-"vkO-9p-5aI.text" = "Noch keine Karte eingelesen";
-
-/* Class = "UINavigationItem"; title = "Recent Scans"; ObjectID = "wyp-Ws-H0U"; */
 "wyp-Ws-H0U.title" = "Letzte Scans";
 
-"zy3-FN-uBZ.text" = "Einlesedatum";
+"80b-a2-83j.text" = "AKTUELLES GUTHABEN";
+"LMu-7B-iqZ.text" = "LETZTE TRANSAKTION";
+"zy3-FN-uBZ.text" = "EINLESEDATUM";
+"vkO-9p-5aI.text" = "Noch keine Karte eingelesen";
+"82r-zG-bKL.text" = "KARTEN-ID";
 
-"vem-uO-h4U.text" = "Noch keine Karte eingelesen";
+"5cC-F2-pcv.normalTitle" = "Karte einlesen";
+"YIv-e8-S3i.title" = "Einlesen";
+
 
 "YCW-Gc-Kjj.text" = "KONTAKT";
 "IKe-kI-Edd.text" = "Deine Karte funktioniert mit der App, ist aber noch nicht im App Store aufgelistet? Bitte sende mir eine E-Mail!";
 
 "YYm-FY-bSD.text" = "INFORMATIONEN";
+"vO9-ux-aXh.text" = "Diese App ist Open Source, lizenziert unter der GNU General Public License.";
 "kKz-3H-Aho.text" = "Bitte gib eine Bewertung im App Store ab und teile die App mit deinen Freunden.";
 "yBa-56-WCc.normalTitle" = "Mensa-Guthaben im App Store";
 "V2s-1s-uhS.normalTitle" = "Mensa-Guthaben teilen";
 "65Y-Qf-SLG.normalTitle" = "Mensa-Guthaben auf Github";
 
 "V0R-F5-ST3.text" = "WEITERE APPS";
-"vWN-39-6aA.text" = "im iOS App Store";
 "hR0-e9-VZ7.normalTitle" = "Kundendatenbank";

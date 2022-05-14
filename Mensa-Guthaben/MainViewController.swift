@@ -234,7 +234,7 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     func getDateString() -> String {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "dd.MM.yyyy HH:mm"
+        dateFormatterGet.dateFormat = "dd.MM. HH:mm"
         return dateFormatterGet.string(from: Date())
     }
     
