@@ -31,6 +31,10 @@
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Read Mensa Card</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>54MYJT</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
 					<true/>
 				</dict>
@@ -45,6 +49,10 @@
 					<true/>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<false/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Read Mensa Card</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>aXZN1p</string>
 				</dict>
 			</dict>
 			<key>INIntentResponse</key>
