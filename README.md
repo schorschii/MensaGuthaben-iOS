@@ -37,6 +37,7 @@ With this app you can read the current balance of your mensa card.
 * Hochschule Koblenz
 * HAW Hamburg
 * FH Erfurt
+* TU Braunschweig
 
 ## Contributing
 I'm happy if you want to contribute. Please open an issue if you want to:
