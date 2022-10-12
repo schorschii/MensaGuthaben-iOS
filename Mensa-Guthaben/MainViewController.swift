@@ -24,7 +24,25 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if(MainViewController.DEMO) {
-            demo()
+            // show demo values for App Store screenshots
+            displayValues(
+                currentBalance: 15.48,
+                lastTransaction: 5.98,
+                date: self.getDateString(),
+                cardId: "1234567890"
+            )
+        } else {
+            // restore last state
+            let db = MensaDatabase()
+            let historyItems = db.getEntries()
+            if(!historyItems.isEmpty) {
+                displayValues(
+                    currentBalance: historyItems[0].balance,
+                    lastTransaction: historyItems[0].lastTransaction,
+                    date: historyItems[0].date,
+                    cardId: historyItems[0].cardID
+                )
+            }
         }
     }
     override func restoreUserActivityState(_ activity: NSUserActivity) {
@@ -93,7 +111,12 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
                 print("CARD-TYPE:"+String(tag.mifareFamily.rawValue))
                 print("CARD-ID hex:"+idData.hexEncodedString())
                 DispatchQueue.main.async {
-                    self.labelCardID.text = String(idInt)
+                    self.displayValues(
+                        currentBalance: nil,
+                        lastTransaction: nil,
+                        date: nil,
+                        cardId: String(idInt)
+                    )
                 }
                 
                 var appIdBuff : [Int] = [];
@@ -129,11 +152,12 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
                                 )
                                 let currentBalanceValue : Double = self.intToEuro(value:currentBalanceRaw)
                                 DispatchQueue.main.async {
-                                    self.labelCurrentBalance.text = String(format: "%.2f €", currentBalanceValue)
-                                    self.labelDate.text = self.getDateString()
-                                    UIView.animate(withDuration: 1.0, animations: {
-                                        self.viewCardBackground.backgroundColor = self.getColorByEuro(euro:currentBalanceValue)
-                                    })
+                                    self.displayValues(
+                                        currentBalance: currentBalanceValue,
+                                        lastTransaction: nil,
+                                        date: self.getDateString(),
+                                        cardId: nil
+                                    )
                                 }
                                 
                                 // 3rd command : read last trans
@@ -154,7 +178,12 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
                                             )
                                             lastTransactionValue = self.intToEuro(value:lastTransactionRaw)
                                             DispatchQueue.main.async {
-                                                self.labelLastTransaction.text = String(format: "%.2f €", lastTransactionValue)
+                                                self.displayValues(
+                                                    currentBalance: nil,
+                                                    lastTransaction: lastTransactionValue,
+                                                    date: nil,
+                                                    cardId: nil
+                                                )
                                             }
                                         }
                                         
@@ -196,7 +225,7 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     func intToEuro(value:Int) -> Double {
         return (Double(value)/1000).rounded(toPlaces: 2)
     }
-    func getColorByEuro(euro:Double) -> UIColor {
+    func getColorByEuro(_ euro:Double) -> UIColor {
         let maxEuro = 10.0
         var position = CGFloat(euro/maxEuro)
         if(position > 1) {position = 1}
@@ -222,14 +251,22 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
         )
     }
     
-    func demo() {
-        self.labelCurrentBalance.text = String(format: "%.2f €", 15.48)
-        self.labelLastTransaction.text = String(format: "%.2f €", 5.98)
-        self.labelDate.text = self.getDateString()
-        self.labelCardID.text = "1234567890"
-        UIView.animate(withDuration: 1.0, animations: {
-            self.viewCardBackground.backgroundColor = self.getColorByEuro(euro:15.48)
-        })
+    func displayValues(currentBalance:Double?, lastTransaction:Double?, date:String?, cardId:String?) {
+        if let currentBalanceUnwrapped = currentBalance {
+            self.labelCurrentBalance.text = String(format: "%.2f €", currentBalanceUnwrapped)
+            UIView.animate(withDuration: 1.0, animations: {
+                self.viewCardBackground.backgroundColor = self.getColorByEuro(currentBalanceUnwrapped)
+            })
+        }
+        if let lastTransactionUnwrapped = lastTransaction {
+            self.labelLastTransaction.text = String(format: "%.2f €", lastTransactionUnwrapped)
+        }
+        if let dateUnwrapped = date {
+            self.labelDate.text = dateUnwrapped
+        }
+        if let cardIdUnwrapped = cardId {
+            self.labelCardID.text = cardIdUnwrapped
+        }
     }
     
     func getDateString() -> String {
