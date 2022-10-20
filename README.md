@@ -38,13 +38,9 @@ With this app you can read the current balance of your mensa card.
 * HAW Hamburg
 * FH Erfurt
 * TU Braunschweig
+* Otto-Friedrich Universität Bamberg
 
 ## Contributing
 I'm happy if you want to contribute. Please open an issue if you want to:
 - report a bug / feedback
 - add new card to the list of supported universities
-
-## License
-GNU General Public License - see LICENSE.txt  
-© 2019-2021 Georg Sieber - https://georg-sieber.de  
-view source and fork me on [GitHub](https://github.com/schorschii/MensaGuthaben-iOS)
