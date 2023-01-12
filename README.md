@@ -24,7 +24,9 @@ With this app you can read the current balance of your mensa card.
 * THOSKA der Uni Jena
 * TU Ilmenau
 * Uni Bielefeld
-* Hochschule der Medien, Stuttgart und der Uni Stuttgart
+* Hochschule der Medien, Stuttgart
+* Uni Stuttgart
+* Uni Hohenheim
 * Martin-Luther-Universität Halle-Wittenberg
 * Hochschule Furtwangen (HFU)
 * Studierendenwerk Freiburg-Schwarzwald (SWFR)
