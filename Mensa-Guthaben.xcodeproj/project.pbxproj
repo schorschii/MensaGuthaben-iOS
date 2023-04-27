@@ -20,6 +20,7 @@
 		56D9016D2300256800DD46A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9016C2300256800DD46A5 /* MainViewController.swift */; };
 		56D901702300256800DD46A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D9016E2300256800DD46A5 /* Main.storyboard */; };
 		56D901752300256900DD46A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D901732300256900DD46A5 /* LaunchScreen.storyboard */; };
+		E1CDA8CA29FACC440018B2B4 /* MensaNfcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CDA8C929FACC440018B2B4 /* MensaNfcController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		56D901742300256900DD46A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56D901762300256900DD46A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D9017C2300319F00DD46A5 /* Mensa-Guthaben.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa-Guthaben.entitlements"; sourceTree = "<group>"; };
+		E1CDA8C929FACC440018B2B4 /* MensaNfcController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaNfcController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				56D9016A2300256800DD46A5 /* SceneDelegate.swift */,
 				56D2DFA8230608060014CA4C /* AboutViewController.swift */,
 				56D9016C2300256800DD46A5 /* MainViewController.swift */,
+				E1CDA8C929FACC440018B2B4 /* MensaNfcController.swift */,
 				56D2DFBC2306FD600014CA4C /* HistoryTableViewController.swift */,
 				56D2DFBE230700610014CA4C /* HistoryTableViewCell.swift */,
 				5675985A230716FE002898B3 /* HistoryItem.swift */,
@@ -205,6 +208,7 @@
 				5643F325282EFA1E002ABA5D /* Intents.intentdefinition in Sources */,
 				56D901692300256800DD46A5 /* AppDelegate.swift in Sources */,
 				56D2DFA9230608060014CA4C /* AboutViewController.swift in Sources */,
+				E1CDA8CA29FACC440018B2B4 /* MensaNfcController.swift in Sources */,
 				56D2DFBD2306FD600014CA4C /* HistoryTableViewController.swift in Sources */,
 				56D9016B2300256800DD46A5 /* SceneDelegate.swift in Sources */,
 				56ADF8C72330036000184F0B /* MensaDatabase.swift in Sources */,
