@@ -22,7 +22,7 @@ class MensaNfcController {
         session.connect(to: tag) { (error: Error?) in
             if(error != nil) {
                 print("CONNECTION ERROR: "+error!.localizedDescription)
-                self.session.invalidate(errorMessage: error!.localizedDescription)
+                self.session.invalidate(errorMessage: NSLocalizedString("Connection error: " , comment: "") + error!.localizedDescription)
                 return
             }
             print("CONNECTED TO CARD")
@@ -50,7 +50,8 @@ class MensaNfcController {
                     $0.load(as: Int.self)
                 }
             } else {
-                self.session.invalidate(errorMessage: "INVALID CARD TYPE: " + String(describing:tag))
+                print("INVALID CARD TYPE: " + String(describing:tag))
+                self.session.invalidate(errorMessage: NSLocalizedString("Invalid card type: ", comment: "") + String(describing:tag))
                 return
             }
 
