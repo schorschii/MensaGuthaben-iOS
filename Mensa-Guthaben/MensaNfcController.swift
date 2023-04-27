@@ -21,7 +21,8 @@ class MensaNfcController {
     func communicate(tag: NFCTag) {
         session.connect(to: tag) { (error: Error?) in
             if(error != nil) {
-                self.session.invalidate(errorMessage: "CONNECTION ERROR: "+error!.localizedDescription)
+                print("CONNECTION ERROR: "+error!.localizedDescription)
+                self.session.invalidate(errorMessage: error!.localizedDescription)
                 return
             }
             print("CONNECTED TO CARD")
