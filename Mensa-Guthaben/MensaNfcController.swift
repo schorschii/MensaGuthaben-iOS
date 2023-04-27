@@ -11,6 +11,9 @@ import CoreNFC
 
 class MensaNfcController {
 
+    static var APP_ID  : Int    = 0x5F8415
+    static var FILE_ID : UInt8  = 1
+
     let session: NFCTagReaderSession
     let mainVc: MainViewController
     init(session: NFCTagReaderSession, mainViewControllerReference: MainViewController) {
@@ -71,7 +74,7 @@ class MensaNfcController {
                 tag: tag,
                 data: self.compileNfcRequest(
                     command: 0x5a, // command : select app
-                    parameter: MainViewController.APP_ID.toByteArray()
+                    parameter: MensaNfcController.APP_ID.toByteArray()
                 ),
                 completion: { (data1) -> () in
 
@@ -80,7 +83,7 @@ class MensaNfcController {
                         tag: tag,
                         data: self.compileNfcRequest(
                             command: 0x6c, // command : read value
-                            parameter: [MainViewController.FILE_ID] // file id : 1
+                            parameter: [MensaNfcController.FILE_ID] // file id : 1
                         ),
                         completion: { (data2) -> () in
 
@@ -105,7 +108,7 @@ class MensaNfcController {
                                 tag: tag,
                                 data: self.compileNfcRequest(
                                     command: 0xf5, // command : get file settings
-                                    parameter: [MainViewController.FILE_ID] // file id : 1
+                                    parameter: [MensaNfcController.FILE_ID] // file id : 1
                                 ),
                                 completion: { (data3) -> () in
 

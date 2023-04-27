@@ -12,9 +12,7 @@ import SQLite3
 
 class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
-    static var APP_ID  : Int    = 0x5F8415
-    static var FILE_ID : UInt8  = 1
-    static var DEMO    : Bool   = false
+    static var DEMO : Bool   = false
     
     var session: NFCTagReaderSession?
     var db = MensaDatabase()
