@@ -25,7 +25,11 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<false/>
 	<key>NFCReaderUsageDescription</key>
-	<string>NFC tag to read NDEF messages into the application</string>
+	<string>NFC is used to read the balance from your Mensa Card</string>
+    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+    <array>
+        <string>D2760000850100</string>
+    </array>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ReadMensaCardIntent</string>
