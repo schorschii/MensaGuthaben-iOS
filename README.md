@@ -11,7 +11,7 @@ With this app you can read the current balance of your mensa card.
 - iOS 13 or newer
 
 ## Successfully Tested Cards
-* TU Dresden (only Studentenwerk Emeal card; support for the Campuscard is technically not possible)
+* TU Dresden (Studentenwerk Emeal card and TU Campuscard!)
 * Uni Leipzig
 * HS/Uni Flensburg (Studentenwerk SH)
 * TU Darmstadt
