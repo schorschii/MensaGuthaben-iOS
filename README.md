@@ -42,6 +42,7 @@ With this app you can read the current balance of your mensa card.
 * TU Braunschweig
 * Otto-Friedrich Universität Bamberg
 * HS/Uni Bremen
+* Christian-Albrechts-Universität zu Kiel
 
 ## Contributing
 I'm happy if you want to contribute. Please open an issue if you want to:
