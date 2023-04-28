@@ -39,7 +39,8 @@ class MensaDatabase {
             let date = MensaDatabase.getCurrentDateString()
             let date2 = date as NSString
             sqlite3_bind_text(stmt, 3, date2.utf8String, -1, nil)
-            sqlite3_bind_text(stmt, 4, cardID, -1, nil)
+            let cardID2 = cardID as NSString
+            sqlite3_bind_text(stmt, 4, cardID2.utf8String, -1, nil)
             if sqlite3_step(stmt) == SQLITE_DONE {
                 sqlite3_finalize(stmt)
             }
