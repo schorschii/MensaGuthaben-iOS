@@ -31,14 +31,16 @@ class MensaDatabase {
         }
     }
     
-    func insertRecord(balance:Double, lastTransaction:Double, date:String, cardID: String) {
+    func insertRecord(balance:Double, lastTransaction:Double, cardID:String) {
         var stmt:OpaquePointer?
         if sqlite3_prepare(self.db, "INSERT INTO history(balance, lastTransaction, scanDate, cardID) VALUES (?,?,?,?)", -1, &stmt, nil) == SQLITE_OK {
             sqlite3_bind_double(stmt, 1, balance)
             sqlite3_bind_double(stmt, 2, lastTransaction)
+            let date = MensaDatabase.getCurrentDateString()
             let date2 = date as NSString
             sqlite3_bind_text(stmt, 3, date2.utf8String, -1, nil)
-            sqlite3_bind_text(stmt, 4, cardID, -1, nil)
+            let cardID2 = cardID as NSString
+            sqlite3_bind_text(stmt, 4, cardID2.utf8String, -1, nil)
             if sqlite3_step(stmt) == SQLITE_DONE {
                 sqlite3_finalize(stmt)
             }
@@ -72,4 +74,10 @@ class MensaDatabase {
         return historyStore
     }
     
+    static func getCurrentDateString() -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "dd.MM. HH:mm"
+        return dateFormatterGet.string(from: Date())
+    }
+
 }
