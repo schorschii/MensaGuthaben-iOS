@@ -25,7 +25,7 @@ class MensaNfcController {
         session.connect(to: tag) { (error: Error?) in
             if(error != nil) {
                 print("CONNECTION ERROR: "+error!.localizedDescription)
-                self.session.invalidate(errorMessage: NSLocalizedString("Connection error: " , comment: "") + error!.localizedDescription)
+                self.session.invalidate(errorMessage: NSLocalizedString("Connection error:", comment: "") + " " + error!.localizedDescription)
                 return
             }
             print("CONNECTED TO CARD")
@@ -36,25 +36,14 @@ class MensaNfcController {
             if case let NFCTag.miFare(tag) = tag {
                 print("CARD TYPE: mifare "+String(tag.mifareFamily.rawValue))
                 idData = tag.identifier
-                if(idData.count == 7) {
-                    idData.append(UInt8(0))
-                }
-                idInt = idData.withUnsafeBytes {
-                    $0.load(as: Int.self)
-                }
+                idInt = self.idDataToInt(idData)
             } else if case let NFCTag.iso7816(tag) = tag {
                 print("CARD TYPE: iso7816")
-                // todo: put id extraction into function
                 idData = tag.identifier
-                if(idData.count == 7) {
-                    idData.append(UInt8(0))
-                }
-                idInt = idData.withUnsafeBytes {
-                    $0.load(as: Int.self)
-                }
+                idInt = self.idDataToInt(idData)
             } else {
                 print("INVALID CARD TYPE: " + String(describing:tag))
-                self.session.invalidate(errorMessage: NSLocalizedString("Invalid card type: ", comment: "") + String(describing:tag))
+                self.session.invalidate(errorMessage: NSLocalizedString("Invalid card type:", comment: "") + " " + String(describing:tag))
                 return
             }
 
@@ -186,6 +175,16 @@ class MensaNfcController {
         }
         buff.append(0x00)
         return Data(buff)
+    }
+
+    func idDataToInt(_ d:Data) -> Int {
+        var idData = d
+        if(idData.count == 7) {
+            idData.append(UInt8(0))
+        }
+        return idData.withUnsafeBytes {
+            $0.load(as: Int.self)
+        }
     }
 
     func intToEuro(value:Int) -> Double {
