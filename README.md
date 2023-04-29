@@ -49,6 +49,6 @@ I'm happy if you want to contribute. Please open an issue if you want to:
 - report a bug / feedback
 - add new card to the list of supported universities
 
-# Used by
+## Used by
 Code of this project is used in the following applications:
 * [Mensa Dresden](https://github.com/kiliankoe/MensaDresden) / [EmealKit](https://github.com/kiliankoe/EmealKit)
