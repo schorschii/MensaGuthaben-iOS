@@ -291,7 +291,7 @@
                                 <rect key="frame" x="0.0" y="56" width="557.5" height="830"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="T04-36-4Cj">
-                                        <rect key="frame" x="42" y="20" width="474" height="652.5"/>
+                                        <rect key="frame" x="42" y="20" width="474" height="655.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pr0-bk-e18">
                                                 <rect key="frame" x="0.0" y="0.0" width="474" height="41"/>
@@ -302,7 +302,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Georg Sieber 2019-2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-6L-2e8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Georg Sieber 2019-2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-6L-2e8">
                                                         <rect key="frame" x="0.0" y="20.5" width="474" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -423,7 +423,7 @@ For the automation to work, please do not close the app in the background.</stri
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PSa-Ef-55W">
-                                                <rect key="frame" x="0.0" y="473.5" width="474" height="179"/>
+                                                <rect key="frame" x="0.0" y="473.5" width="474" height="182"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER APPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0R-F5-ST3">
                                                         <rect key="frame" x="0.0" y="0.0" width="474" height="17"/>
@@ -472,7 +472,7 @@ For the automation to work, please do not close the app in the background.</stri
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6kR-gD-f4T">
-                                                        <rect key="frame" x="0.0" y="149" width="474" height="30"/>
+                                                        <rect key="frame" x="0.0" y="149" width="474" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="tintColor" red="0.14901960780000001" green="0.59607843140000005" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
