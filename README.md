@@ -5,7 +5,7 @@ With this app you can read the current balance of your mensa card.
 
 ## Screenshot
 <p align="center">
-  <img src=".github/screenshot.png" />
+  <img src=".github/screenshot.png" height="600" />
 </p>
 
 ## System Requirements
