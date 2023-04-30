@@ -4,7 +4,9 @@
 With this app you can read the current balance of your mensa card.
 
 ## Screenshot
-![Screenshot](.github/screenshot.png)
+<p align="center">
+  <img src=".github/screenshot.png" />
+</p>
 
 ## System Requirements
 - iPhone 7 or newer
