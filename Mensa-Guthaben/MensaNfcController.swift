@@ -9,23 +9,36 @@
 import Foundation
 import CoreNFC
 
-class MensaNfcController {
+class MensaNfcController : NSObject, NFCTagReaderSessionDelegate {
 
     static var APP_ID  : Int    = 0x5F8415
     static var FILE_ID : UInt8  = 1
 
-    let session: NFCTagReaderSession
     let mainVc: MainViewController
-    init(session: NFCTagReaderSession, mainViewControllerReference: MainViewController) {
-        self.session = session
+
+    init(mainViewControllerReference: MainViewController) {
         self.mainVc = mainViewControllerReference
     }
 
-    func communicate(tag: NFCTag) {
+    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
+    }
+
+    func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
+        print(error.localizedDescription)
+    }
+
+    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
+        for tag in tags {
+            communicate(session: session, tag: tag)
+            return
+        }
+    }
+
+    private func communicate(session: NFCTagReaderSession, tag: NFCTag) {
         session.connect(to: tag) { (error: Error?) in
             if(error != nil) {
                 print("CONNECTION ERROR: "+error!.localizedDescription)
-                self.session.invalidate(errorMessage: NSLocalizedString("Connection error:", comment: "") + " " + error!.localizedDescription)
+                session.invalidate(errorMessage: NSLocalizedString("Connection error:", comment: "") + " " + error!.localizedDescription)
                 return
             }
             print("CONNECTED TO CARD")
@@ -43,7 +56,7 @@ class MensaNfcController {
                 idInt = self.idDataToInt(idData)
             } else {
                 print("INVALID CARD TYPE: " + String(describing:tag))
-                self.session.invalidate(errorMessage: NSLocalizedString("Invalid card type:", comment: "") + " " + String(describing:tag))
+                session.invalidate(errorMessage: NSLocalizedString("Invalid card type:", comment: "") + " " + String(describing:tag))
                 return
             }
 
@@ -125,7 +138,7 @@ class MensaNfcController {
                                     )
 
                                     // dismiss iOS NFC window
-                                    self.session.invalidate()
+                                    session.invalidate()
 
                                     // ask for review
                                     self.mainVc.displayReviewNow()
@@ -141,7 +154,8 @@ class MensaNfcController {
 
         }
     }
-    func send(tag:NFCTag, data:Data, completion:@escaping (_ data: Data)->()) {
+
+    private func send(tag:NFCTag, data:Data, completion:@escaping (_ data: Data)->()) {
         print("COMMAND TO CARD => "+data.hexEncodedString())
         if case let NFCTag.miFare(tag) = tag {
             tag.sendMiFareCommand(commandPacket: data, completionHandler: { (data:Data, error:Error?) in
@@ -164,7 +178,7 @@ class MensaNfcController {
         }
     }
 
-    func compileNfcRequest(command: UInt8, parameter: [UInt8]?) -> Data {
+    private func compileNfcRequest(command: UInt8, parameter: [UInt8]?) -> Data {
         var buff : [UInt8] = []
         buff.append(0x90)
         buff.append(command)
@@ -180,7 +194,7 @@ class MensaNfcController {
         return Data(buff)
     }
 
-    func idDataToInt(_ d:Data) -> Int {
+    private func idDataToInt(_ d:Data) -> Int {
         var idData = d
         if(idData.count == 7) {
             idData.append(UInt8(0))
@@ -190,7 +204,7 @@ class MensaNfcController {
         }
     }
 
-    func intToEuro(value:Int) -> Double {
+    private func intToEuro(value:Int) -> Double {
         return (Double(value)/1000).rounded(toPlaces: 2)
     }
 

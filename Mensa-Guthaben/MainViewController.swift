@@ -11,14 +11,13 @@ import CoreNFC
 import SQLite3
 import StoreKit
 
-class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
+class MainViewController: UIViewController {
     
-    static var DEMO : Bool   = false
+    static var DEMO: Bool = false
     
     var session: NFCTagReaderSession?
+    var nfcController: MensaNfcController?
     var db = MensaDatabase()
-    
-    @IBOutlet weak var bottomStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +62,7 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
         startReaderSession()
     }
     
-    func startReaderSession() {
+    private func startReaderSession() {
         guard NFCTagReaderSession.readingAvailable else {
             let alertController = UIAlertController(
                 title: NSLocalizedString("NFC Not Supported", comment: ""),
@@ -75,24 +74,13 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
             return
         }
         
-        session = NFCTagReaderSession(pollingOption: .iso14443, delegate: self)
+        nfcController = MensaNfcController(mainViewControllerReference: self)
+        session = NFCTagReaderSession(pollingOption: .iso14443, delegate: nfcController!)
         session?.alertMessage = NSLocalizedString("Please hold your Mensa card near the NFC sensor.", comment: "")
         session?.begin()
     }
-    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
-    }
-    func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
-        let nfcController = MensaNfcController(session: session, mainViewControllerReference: self)
-        for tag in tags {
-            nfcController.communicate(tag: tag)
-            return
-        }
-    }
     
-    func getColorByEuro(_ euro:Double) -> UIColor {
+    private func getColorByEuro(_ euro:Double) -> UIColor {
         let maxEuro = 10.0
         var position = CGFloat(euro/maxEuro)
         if(position > 1) {position = 1}

@@ -186,7 +186,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomStackView" destination="P3N-D3-PjL" id="YK7-LP-yfR"/>
                         <outlet property="labelCardID" destination="vkO-9p-5aI" id="5dE-Av-YDQ"/>
                         <outlet property="labelCurrentBalance" destination="UPO-oi-gFY" id="2sJ-D2-QdG"/>
                         <outlet property="labelDate" destination="vem-uO-h4U" id="Jeb-k2-wfe"/>
