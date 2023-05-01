@@ -9,6 +9,7 @@
 import UIKit
 import CoreNFC
 import SQLite3
+import StoreKit
 
 class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
     
@@ -135,6 +136,17 @@ class MainViewController: UIViewController, NFCTagReaderSessionDelegate {
         } else {
             self.labelDate.text = MensaDatabase.getCurrentDateString()
         }
+    }
+    
+    func displayReviewNow() {
+        let askedForReview = UserDefaults.standard.integer(forKey: "asked-for-review")
+        if(askedForReview > 0) {
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            SKStoreReviewController.requestReview()
+        }
+        UserDefaults.standard.setValue(askedForReview + 1, forKey: "asked-for-review")
     }
     
 }

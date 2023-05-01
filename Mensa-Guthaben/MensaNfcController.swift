@@ -127,6 +127,9 @@ class MensaNfcController {
                                     // dismiss iOS NFC window
                                     self.session.invalidate()
 
+                                    // ask for review
+                                    self.mainVc.displayReviewNow()
+
                                 }
                             )
 
