@@ -20,6 +20,7 @@ With this app you can read the current balance of your mensa card.
 * Uni Trier
 * Uni Greifswald
 * Leibniz Universität Hannover
+* Tierärztliche Hochschule Hannover
 * Ruhr-Uni Bochum
 * h_da (hochschule darmstadt)
 * THOSKA der Bauhaus-Universität Weimar, Hochschule für Musik „Franz List“ Weimar
