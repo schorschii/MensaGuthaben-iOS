@@ -47,6 +47,7 @@ With this app you can read the current balance of your mensa card.
 * HS/Uni Bremen
 * Christian-Albrechts-Universität zu Kiel
 * Mensa Lübeck mit Cafeteria
+* Campus-Card des Studentenwerks Schleswig-Holstein
 
 ## Contributing
 I'm happy if you want to contribute. Please open an issue if you want to:
