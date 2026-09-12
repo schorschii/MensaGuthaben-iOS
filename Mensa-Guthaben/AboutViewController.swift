@@ -11,10 +11,14 @@ import StoreKit
 
 class AboutViewController: UIViewController, SKStoreProductViewControllerDelegate {
     
+    @IBOutlet weak var stackView: UIScrollView!
     @IBOutlet weak var labelVersion: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 26.0, *) {
+            stackView.topEdgeEffect.style = .hard
+        }
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         labelVersion.text = "v"+(appVersion ?? "?")
     }
