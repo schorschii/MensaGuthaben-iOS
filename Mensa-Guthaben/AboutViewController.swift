@@ -20,7 +20,7 @@ class AboutViewController: UIViewController, SKStoreProductViewControllerDelegat
             stackView.topEdgeEffect.style = .hard
         }
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        labelVersion.text = "v"+(appVersion ?? "?")
+        labelVersion.text = "Version "+(appVersion ?? "?")
     }
     
     @IBAction func onClickDone(_ sender: UIBarButtonItem) {
